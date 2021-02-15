@@ -1,0 +1,15 @@
+<div class="card">
+  <p><%= @question %></p>
+  <p><em>-You</em></p>
+</div>
+<div class="card">
+  <% if @question.end_with?('?') %>
+    <p>Silly question, get dressed and go to work!</p>
+    <% elsif @question == "I am going to work" %>
+    <p>Great!</p>
+    <% else %>
+    <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p><em>-Coach</em></p>
+</div>
+<%= link_to "Ask another question", ask_path  %>
